@@ -24,17 +24,36 @@ int main()
     int x = 40+60;
     cout << x <<endl;
     x = 100 - 60;
-    cout << x;
+    cout << x<<endl;
     x = 5 * 6;
-    cout << x;
+    cout << x<<endl;
     x = 10 / 3; //remainder dropped, because int
-    cout << x;
+    cout << x<<endl;
     x = 25 % 7; //modulus - gives remainder after int div
-    cout << x;
+    cout << x<<endl;
     x = 5 + 2 * 2; //natural precedence
-    cout << x;
+    cout << x<<endl;
     x = (5 + 2) * 2; //parentheses
-    cout << x;
+    cout << x<<endl;
+
+    //assignment/increment
+    x = 10;
+    cout << x<<endl;
+    x += 4;
+    cout << x<<endl;
+    x -= 5;
+    cout << x<<endl;
+    x++;
+    cout << x<<endl;
+    int y;
+    y = ++x;
+    cout << "++x="<<x<<"y="<<y<<endl;
+    y = x++;
+    cout << "x++="<<x<<"y="<<y<<endl;
+
+
+
+
 
 
     //probably I won't touch this one right now, if <>0 then IDE prints an error msg
