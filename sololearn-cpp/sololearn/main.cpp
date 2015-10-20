@@ -66,7 +66,37 @@ for (int a = 10; a>=0; a-=3){
     cout << a<<endl;
 }
 
-//
+//do...while
+//executes at least once...in a while!
+int grok = 0;
+do {
+    cout << a <<endl;
+    a++;
+} while (a<5);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     //probably I won't touch this one right now, if <>0 then IDE prints an error msg
