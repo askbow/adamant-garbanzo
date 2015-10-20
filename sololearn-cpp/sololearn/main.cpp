@@ -34,8 +34,29 @@ else {cout << "sorry"<<endl;}
 
 //single-statement
 int kk = 10;
-if (kk>=5) cout << "yes"<<endl;
-else cout << "no"<<endl;
+if (kk>=5) cout << "yes\n\n\n\n"<<endl;
+else cout << "no\n\n\n\n"<<endl;
+
+//LOOPs:
+
+//while:
+int num = 1;
+while (num<6){
+    cout << "num: "<<num<<endl;
+    num++;
+}
+
+//merely asking for numbers
+num = 1;
+int number;
+int total = 0;
+while (num<=5){
+    cin >> number;
+    total += number;
+    num++;
+}
+
+cout <<total<<endl;
 
 
 
