@@ -76,8 +76,19 @@ do {
 
 
 
-
-
+//switch
+int draks;
+cin >> draks;
+switch(draks){
+case 0:
+    cout << "zero";
+    break;
+case 42:
+    cout << "the right answer";
+    break;
+default:
+    cout << "unknown";
+}
 
 
 
