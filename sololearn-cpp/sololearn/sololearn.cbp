@@ -33,6 +33,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="basicconcepts.cpp" />
+		<Unit filename="flowcontrol.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
