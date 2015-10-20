@@ -91,9 +91,17 @@ default:
 }
 
 
+//logic:
+// && - AND
+// || - OR
+// !  - NOT
 
-
-
+cout << "\n\n===>\twe have a nice place here\n\n";
+int age = 23;
+int money = 1000;
+if (age >21 && money >500){
+    cout << "come in ;)\n";
+}
 
 
 
