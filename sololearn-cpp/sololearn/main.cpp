@@ -4,52 +4,38 @@ using namespace std;
 
 int main()
 {
-    //basic vars:
-    int myVar = 0;
-    int a; int b = 12;
-    a = 30;
-    int sum = a + b;
-    cout << myVar;
-    cout << sum; // outputs 42
+//if statement
+if (7>4){
+    cout << "spot on";
+}
 
-    //var input-output
-    cout << "please enter a number \n";
-    int num;
-    cin >> num;
-    cout << "give me more numbers!!!!!!! \n";
-    cin >> a >> b;
-    cout << "Sum is:" << a+b << endl;
+//relational ops
+if (7>=4){cout << "kind of";} //gt-eq
+if (7<=4){cout << "strange";} //lt-eq
+if (7==4){cout << "two bits off";} //eq
+if (7!=4){cout << "yep";} //n-eq
 
-    //basic arithmetic:
-    int x = 40+60;
-    cout << x <<endl;
-    x = 100 - 60;
-    cout << x<<endl;
-    x = 5 * 6;
-    cout << x<<endl;
-    x = 10 / 3; //remainder dropped, because int
-    cout << x<<endl;
-    x = 25 % 7; //modulus - gives remainder after int div
-    cout << x<<endl;
-    x = 5 + 2 * 2; //natural precedence
-    cout << x<<endl;
-    x = (5 + 2) * 2; //parentheses
-    cout << x<<endl;
+int a = 3; int b = 42;
+if (b > a) {cout << "the answer is " << b << endl;}
 
-    //assignment/increment
-    x = 10;
-    cout << x<<endl;
-    x += 4;
-    cout << x<<endl;
-    x -= 5;
-    cout << x<<endl;
-    x++;
-    cout << x<<endl;
-    int y;
-    y = ++x;
-    cout << "++x="<<x<<"y="<<y<<endl;
-    y = x++;
-    cout << "x++="<<x<<"y="<<y<<endl;
+//if-else
+int mark;
+cin >> mark;
+if (mark < 50) {cout << "fail" << endl;}
+else {cout << "congrats =)";}
+
+//if nesting
+if (mark >=50){
+    cout << "good job"<<endl;
+    if (mark >=100){cout << "wow"<<endl;}
+}
+else {cout << "sorry"<<endl;}
+
+
+//single-statement
+int kk = 10;
+if (kk>=5) cout << "yes"<<endl;
+else cout << "no"<<endl;
 
 
 
