@@ -58,9 +58,15 @@ while (num<=5){
 
 cout <<total<<endl;
 
+//for
+for (int x=1; x<10; x++){
+    cout << "i am the model major general\n";
+}
+for (int a = 10; a>=0; a-=3){
+    cout << a<<endl;
+}
 
-
-
+//
 
 
     //probably I won't touch this one right now, if <>0 then IDE prints an error msg
