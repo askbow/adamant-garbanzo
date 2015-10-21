@@ -31,11 +31,35 @@ int backCounter          = 50; //camelCase
 
 int var; int VAR; int Var;     //three different vars - case sensitive
 
+//arrays:
+int aarr[5] = {1,2,3,4,5}; //explicit size
+int barr[]  = {1,2,3,4,5}; //auto-size on init
+cout <<   barr[0]<<endl;
+cout <<         aarr[3]<<endl;
 
+barr[2] = 42;
 
+//iteration through an array:
+for(int x = 0; x<5; x++){
+    barr[x] = 42;
+    cout << x << ":"<< barr[x] << endl;
+}
 
+int carr[] = {1,1,2,3,5,8,13};
+int sum = 0;
 
+for(int x=0; x<5;x++){
+    sum +=carr[x];
+}
+cout<<sum<<endl;
 
+//multi-dimensional:
+int multia[3][4][2][5][100];
+int multib[2][3] = {
+{    1,2,3}, //1st row
+{    2,3,4}  //2nd row
+};
+cout << multib[0][1]<< endl;
 
 
 
