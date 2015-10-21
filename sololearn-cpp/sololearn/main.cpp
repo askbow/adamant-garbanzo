@@ -62,7 +62,32 @@ int multib[2][3] = {
 cout << multib[0][1]<< endl;
 
 
+//pointers:
+int goals = 5;
+cout << &goals <<endl; //var address
 
+//pointers to different data types:
+int *ip;
+double *dp;
+float *fp;
+char *ch;
+
+int *goalPtr;
+goalPtr = &goals; //write an address to a pointer
+
+cout <<goals<<endl; //var value
+cout <<goalPtr<<endl; //var's address
+cout << *goalPtr<<endl; //var's value
+
+//experiment: this should work
+cout << *&goals<<endl; //var's value
+
+//using pointer dereferencing just as using the var:
+int derefa = 1; //1
+int *pDerefa = &derefa;
+derefa = derefa + 2; //3
+derefa = *pDerefa + 4; //7
+*pDerefa = *pDerefa + 8; //15
 
 
 
