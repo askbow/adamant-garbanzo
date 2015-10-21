@@ -89,6 +89,33 @@ derefa = derefa + 2; //3
 derefa = *pDerefa + 4; //7
 *pDerefa = *pDerefa + 8; //15
 
+//dynamic memory allocation: stack and heap
+int stk = 2; //stack
+int *hpr = new int; // allocate in heap
+*hpr = 100; //store
+cout << *hpr<<endl; //retrieve
+delete hpr; //free memory from heap == delete allocation
+//hpr is now a dangling pointer and can be reused:
+hpr = new int;
+// but don't forget to delete it:
+delete hpr; hpr = NULL; //seems to be a safe way...
+
+//same for arrays:
+int *parra = NULL;
+parra = new int[20]; //allocate mem
+delete [] parra; // de-allocate memory from array
+
+//size of data type:
+cout << "\n\ndata type sizes:"<<endl;
+cout << "\tchar       "<<sizeof(char)<<endl;
+cout << "\tint        "<<sizeof(int)<<endl;
+cout << "\tfloat      "<<sizeof(float)<<endl;
+cout << "\tdouble     "<<sizeof(double)<<endl;
+int sizeablevar = 42;
+cout << "\tvar        "<<sizeof(var)<<endl;
+double bigarr[100];
+cout << "\tbigarr     "<<sizeof(bigarr)<<endl;
+cout << "\tbigarr len "<<sizeof(bigarr)/sizeof(bigarr[0])<<endl;
 
 
 
