@@ -20,6 +20,8 @@ void print(int a);
 void print(float a);
 void print(char a);
 
+//recursion:
+int factorial(long int n); //it overflows quickly
 
 int main()
 {
@@ -59,6 +61,11 @@ cout<<volume(2,3,5)<<endl<<endl; //30
 //function overloading:
 int di = 125; float df = 3.14; char dc = 'u';
 print(di);    print(df);       print(dc); //three different functions
+cout<<endl<<endl;
+
+//recursion:
+cout <<factorial(16)<<endl<<endl;//classic factorial example
+
 
 
     //probably I won't touch this one right now, if <>0 then IDE prints an error msg
@@ -105,3 +112,20 @@ void print(char a)
 {
     cout <<a;
 }
+
+int factorial(long int n)
+{
+
+    if (n == 1) { //base case
+            return 1;//recursion exit condition
+    }
+    else{
+        //this implementation overflows after n = 16
+        int a =  n*factorial(n-1);
+        cout <<"iteration="<<n<<"\t"<<a<<endl;;
+        return a;
+    }
+}
+
+
+
