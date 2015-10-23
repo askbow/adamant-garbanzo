@@ -13,6 +13,9 @@ using namespace std;
 void printsomestuff(int inpt); //prototype, MUST include all the params
 int timesTwo(int x);
 int addNumbers(int x, int y);
+int multiNumbers(int x, int y=42); //default param value goes here
+int volume(int l=1, int w=1, int h=1);
+
 
 
 int main()
@@ -42,6 +45,14 @@ srand(time(0));
 cout << 1 + (rand()%1000)<<endl<<endl; //should give a little more random number
 
 
+//default params:
+cout<<multiNumbers(1,5)<<endl;
+cout<<multiNumbers(1)<<endl<<endl;
+cout<<volume()<<endl; //1
+cout<<volume(2)<<endl; //2
+cout<<volume(2,3)<<endl; //6
+cout<<volume(2,3,5)<<endl<<endl; //30
+
     //probably I won't touch this one right now, if <>0 then IDE prints an error msg
     return 0;
 }
@@ -61,3 +72,15 @@ int addNumbers(int x, int y)
 {
     return x + y;
 }
+
+
+int multiNumbers(int x, int y) //default value is set in the declaration at the top
+{
+return x*y;
+}
+
+int volume(int l, int w, int h)
+{
+return l*w*h;
+}
+
