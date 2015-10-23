@@ -16,13 +16,16 @@ int addNumbers(int x, int y);
 int multiNumbers(int x, int y=42); //default param value goes here
 int volume(int l=1, int w=1, int h=1);
 void printArray(int arr[], int size); //passing an array
+void passbyreference(int *x);//passing by reference
 //overloaded functions:
 void print(int a);
 void print(float a);
 void print(char a);
-
 //recursion:
 int factorial(long int n); //it overflows quickly
+
+
+
 
 int main()
 {
@@ -73,8 +76,13 @@ int adr[] = {1,2,3,4,5,6,7,8,9};
 printArray(adr, sizeof(adr)/sizeof(adr[0])); //prints the array
 cout<<endl;
 
-
-
+//passing by reference:
+//good for cases when there is really a lot of data and it is
+//cheaper not to copy it
+int xxx = 41;
+cout <<"before, xxx=="<<xxx<<endl;
+passbyreference(&xxx); //should increase xxx by one
+cout <<"after, xxx=="<<xxx<<endl;
 
 
     //probably I won't touch this one right now, if <>0 then IDE prints an error msg
@@ -143,3 +151,7 @@ void printArray(int arr[], int size)
     }
 }
 
+void passbyreference(int *x)
+{
+*x = *x + 1; //*x++ didn't work
+}
