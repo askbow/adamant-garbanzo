@@ -15,6 +15,7 @@ int timesTwo(int x);
 int addNumbers(int x, int y);
 int multiNumbers(int x, int y=42); //default param value goes here
 int volume(int l=1, int w=1, int h=1);
+void printArray(int arr[], int size); //passing an array
 //overloaded functions:
 void print(int a);
 void print(float a);
@@ -65,6 +66,14 @@ cout<<endl<<endl;
 
 //recursion:
 cout <<factorial(16)<<endl<<endl;//classic factorial example
+
+
+//passing an array as an argument:
+int adr[] = {1,2,3,4,5,6,7,8,9};
+printArray(adr, sizeof(adr)/sizeof(adr[0])); //prints the array
+cout<<endl;
+
+
 
 
 
@@ -127,5 +136,10 @@ int factorial(long int n)
     }
 }
 
-
+void printArray(int arr[], int size)
+{
+    for (int x = 0; x<size; x++){
+        cout <<arr[x];
+    }
+}
 
