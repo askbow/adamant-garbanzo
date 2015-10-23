@@ -15,7 +15,10 @@ int timesTwo(int x);
 int addNumbers(int x, int y);
 int multiNumbers(int x, int y=42); //default param value goes here
 int volume(int l=1, int w=1, int h=1);
-
+//overloaded functions:
+void print(int a);
+void print(float a);
+void print(char a);
 
 
 int main()
@@ -53,6 +56,11 @@ cout<<volume(2)<<endl; //2
 cout<<volume(2,3)<<endl; //6
 cout<<volume(2,3,5)<<endl<<endl; //30
 
+//function overloading:
+int di = 125; float df = 3.14; char dc = 'u';
+print(di);    print(df);       print(dc); //three different functions
+
+
     //probably I won't touch this one right now, if <>0 then IDE prints an error msg
     return 0;
 }
@@ -84,3 +92,16 @@ int volume(int l, int w, int h)
 return l*w*h;
 }
 
+//overloaded functions:
+void print(int a)
+{
+    cout <<a;
+}
+void print(float a)
+{
+    cout <<a;
+}
+void print(char a)
+{
+    cout <<a;
+}
