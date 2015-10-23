@@ -35,6 +35,7 @@
 		<Unit filename="basicconcepts.cpp" />
 		<Unit filename="dataarraypointer.cpp" />
 		<Unit filename="flowcontrol.cpp" />
+		<Unit filename="functions.cpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
