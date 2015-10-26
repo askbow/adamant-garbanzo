@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1445581309 source:c:\github\adamant-garbanzo\sololearn-cpp\sololearn\main.cpp
+1445845716 source:c:\github\adamant-garbanzo\sololearn-cpp\sololearn\main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
@@ -12,4 +12,9 @@
 
 1445436956 source:c:\github\adamant-garbanzo\sololearn-cpp\sololearn\dataarraypointer.cpp
 	<iostream>
+
+1445586128 source:c:\github\adamant-garbanzo\sololearn-cpp\sololearn\functions.cpp
+	<iostream>
+	<cstdlib>
+	<ctime>
 
