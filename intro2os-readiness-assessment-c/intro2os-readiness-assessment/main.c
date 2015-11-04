@@ -151,5 +151,34 @@ printf("We're up for %f ticks.\n", ticks);
 
 
 
+//next section afterwards:
+printf("DONE with Time");
+for(i = 1; i<42; i++) printf("=");
+printf("\n\n\n");
+//
+
+//random:
+int y, n;
+time_t tmtm;
+n = 5; //number of random numbers to generate
+srand((unsigned) time(&tmtm)); //initializes p-random gen to time
+for( y = 0; y <n ; y++)
+{
+    printf("%d\t", rand() % 50); //50 is the upper limit for the gen
+}
+//let's repeat time measurement again with rnd:
+start = time(NULL);
+for(counter = 0; counter<500000000; counter++)
+{
+    //i was supposed to do nothing, but i can't allow optimizations to get in the way
+    dada = (rand() % 500) * counter;
+    //too fast...
+}
+end = time(NULL);
+printf("The loop with rand() used %f seconds.\n", difftime(end, start));
+
+
+
+
     return 0;
 }
