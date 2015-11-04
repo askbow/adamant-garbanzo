@@ -2,6 +2,9 @@
 #include<stdlib.h>
 #include<stdbool.h>
 
+//time and date:
+#include <time.h>
+
 //a block in a linked list:
 struct coolstruct
 {
@@ -105,11 +108,46 @@ for(i = 1; i<42; i++) printf("=");
 printf("\n\n\n");
 //
 
+//TIME:
+//using time:
+time_t sec = time(NULL); //get curr time in seconds
+printf("hours since UNIX epoch start:\t%ld\n", sec/3600);
 
+printf("                  this means:\t%s\n",ctime(&sec));
+//making time:
+struct tm str_time; //time constructor
+time_t time_of_day;
+str_time.tm_year = 1991-1900;
+str_time.tm_mon  = 4;
+str_time.tm_mday = 12;
+str_time.tm_hour = 10; //can't use arrows here...
+str_time.tm_min  = 55;
+str_time.tm_sec  = 31;
+str_time.tm_isdst= 0;
 
+time_of_day = mktime(&str_time);//dates before UNIX epoch start will return NULL
+sec = sec - time_of_day;
+printf("It was about %ld seconds ago,", sec);
+printf(" on %s\n", ctime(&time_of_day));
 
+//measure time of execution:
+time_t start,end;
+volatile long unsigned counter;
+volatile long unsigned  dada=12345;
+start = time(NULL);
+for(counter = 0; counter<500000000; counter++)
+{
+    //i was supposed to do nothing, but i can't allow optimizations to get in the way
+    dada = dada * counter;
+    //too fast...
+}
+end = time(NULL);
+printf("The loop used %f seconds.\n", difftime(end, start));
 
-
+//ticks:
+clock_t ticks;
+ticks = clock();
+printf("We're up for %f ticks.\n", ticks);
 
 
 

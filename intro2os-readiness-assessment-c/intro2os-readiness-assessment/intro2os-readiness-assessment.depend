@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1446651354 source:c:\github\adamant-garbanzo\intro2os-readiness-assessment-c\intro2os-readiness-assessment\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<time.h>
+
