@@ -170,14 +170,54 @@ for( y = 0; y <n ; y++)
 start = time(NULL);
 for(counter = 0; counter<500000000; counter++)
 {
-    //i was supposed to do nothing, but i can't allow optimizations to get in the way
     dada = (rand() % 500) * counter;
-    //too fast...
+    //slower!
 }
 end = time(NULL);
 printf("The loop with rand() used %f seconds.\n", difftime(end, start));
 
 
+//next section afterwards:
+printf("DONE with Random");
+for(i = 1; i<42; i++) printf("=");
+printf("\n\n\n");
+//
+
+//strings
+
+//strcpy() - copy one string into another
+char s1[256], s2[256];
+strcpy(s1, "qwertyuiop");
+strcpy(s2, "asdfghjkl;");
+printf("initial strings:\t%s\t%s\n",s1,s2);
+strcpy(s1,s2);
+printf("copied  strings:\t%s\t%s\n",s1,s2);
+//strcat() - concatenate strings
+strcat(s1,s2);
+printf("joined  string:\t%s\n",s1);
+//strncat() - strcat for N chars of the second string
+strncat(s1,s2,3);
+printf("joined  string:\t%s\n",s1);
+//re-init strings
+strcpy(s1, "qwertyuiop");
+strcpy(s2, "asdfghjkl;");
+//strcmp() - compare
+if(strcmp(s1,s2)==0) strcpy(s1, "qwertyuiop");
+printf("copied  strings:\t%s\t%s\n\n",s1,s2);
+//strchr() - find char occurence
+char *what = "stuff=happens=right";
+char *pointp;
+pointp = what;
+printf(pointp); //can i do it to pointers? yep
+printf("\n=>\n");
+while((pointp = strchr(pointp, "="))!= NULL) //doesn't work as expected by the book
+{
+    printf(++pointp); //increment before use
+    printf("\n=>\n");
+}
+printf("\n=>\n");
+printf(pointp);
+printf("\n=>\n");
 
 
     return 0;
