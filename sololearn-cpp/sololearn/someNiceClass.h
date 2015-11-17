@@ -8,6 +8,7 @@ class someNiceClass
         someNiceClass();  //constructor
         ~someNiceClass(); //destructor
         void nicePrint();
+        void cnicePrint();
     protected:
     private:
 };

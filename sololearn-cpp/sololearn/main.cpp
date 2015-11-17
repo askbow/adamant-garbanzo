@@ -76,6 +76,23 @@ someNiceClass *ptr = &obj;
 ptr->nicePrint();
 
 
+//const exercises:
+const int x=42;
+
+const someNiceClass nak;
+//only const member functions can be called by const class objects
+nak.cnicePrint();
+
+
+
+
+
+
+
+
+
+
+
     //probably I won't touch this one right now, if <>0 then IDE prints an error msg
     return 0;
 }

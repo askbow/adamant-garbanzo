@@ -18,3 +18,7 @@ void nicePrint()
 {
 cout<<"nicePrint"<<endl;
 }
+
+void someNiceClass::cnicePrint() const {
+cout<<"const nice print"<<endl;
+}
