@@ -50,9 +50,17 @@ class BankAccount{
  private:
     float balance;
     string name;
+
+
+    //friend functions:
+    friend void camarade(BankAccount &obj);
 };
 
-
+void camarade(BankAccount &obj);
+{
+    obj.name = obj.name + " is our friend";
+    cout<<obj.balance;
+}
 
 
 int main()
@@ -68,6 +76,11 @@ test.withdraw(1.1);
 cout<<test.readbalance()<<endl;
 test.withdraw(test.readbalance());
 cout<<test.readbalance()<<endl;
+
+//friendly:
+camarade(test);
+
+
 
 //next class exercise:
 someNiceClass obj(56,70);
