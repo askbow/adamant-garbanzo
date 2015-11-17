@@ -7,6 +7,8 @@
 //for time():
 #include <ctime>
 
+#include "someNiceClass.h"
+
 using namespace std;
 
 
@@ -63,6 +65,17 @@ test.withdraw(1.1);
 cout<<test.readbalance()<<endl;
 test.withdraw(test.readbalance());
 cout<<test.readbalance()<<endl;
+
+//next class exercise:
+someNiceClass obj;
+//using member class functions:
+obj.nicePrint();
+//using a pointer to refer to the object
+someNiceClass *ptr = &obj;
+//member usage:
+ptr->nicePrint();
+
+
     //probably I won't touch this one right now, if <>0 then IDE prints an error msg
     return 0;
 }

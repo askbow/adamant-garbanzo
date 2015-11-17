@@ -1,8 +1,9 @@
 # depslib dependency file v1.0
-1445845716 source:c:\github\adamant-garbanzo\sololearn-cpp\sololearn\main.cpp
+1447768670 source:c:\github\adamant-garbanzo\sololearn-cpp\sololearn\main.cpp
 	<iostream>
 	<cstdlib>
 	<ctime>
+	"someNiceClass.h"
 
 1445235344 source:c:\github\adamant-garbanzo\sololearn-cpp\sololearn\basicconcepts.cpp
 	<iostream>
@@ -17,4 +18,6 @@
 	<iostream>
 	<cstdlib>
 	<ctime>
+
+1447766574 c:\github\adamant-garbanzo\sololearn-cpp\sololearn\someniceclass.h
 
