@@ -32,11 +32,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Birthday.cpp" />
+		<Unit filename="Birthday.h" />
+		<Unit filename="Person.cpp" />
+		<Unit filename="Person.h" />
 		<Unit filename="basicconcepts.cpp" />
 		<Unit filename="dataarraypointer.cpp" />
 		<Unit filename="flowcontrol.cpp" />
 		<Unit filename="functions.cpp" />
 		<Unit filename="main.cpp" />
+		<Unit filename="someNiceClass.cpp" />
+		<Unit filename="someNiceClass.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
