@@ -67,7 +67,7 @@ test.withdraw(test.readbalance());
 cout<<test.readbalance()<<endl;
 
 //next class exercise:
-someNiceClass obj;
+someNiceClass obj(56,70);
 //using member class functions:
 obj.nicePrint();
 //using a pointer to refer to the object
@@ -79,7 +79,7 @@ ptr->nicePrint();
 //const exercises:
 const int x=42;
 
-const someNiceClass nak;
+const someNiceClass nak(42, 123);
 //only const member functions can be called by const class objects
 nak.cnicePrint();
 

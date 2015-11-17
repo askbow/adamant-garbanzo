@@ -3,9 +3,11 @@
 
 using namespace std;
 
-someNiceClass::someNiceClass()
+someNiceClass::someNiceClass(int a, int b)
+: simpleVar(a), constVar(b)
 {//constructor
-     cout<<"Constructor"<<endl;
+     cout<<simpleVar<<endl;
+     cout<<constVar<<endl;
 }
 
 someNiceClass::~someNiceClass()
