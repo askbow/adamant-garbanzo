@@ -8,6 +8,9 @@
 #include <ctime>
 
 #include "someNiceClass.h"
+#include "Birthday.h"
+#include "Person.h"
+
 
 using namespace std;
 
@@ -83,8 +86,10 @@ const someNiceClass nak(42, 123);
 //only const member functions can be called by const class objects
 nak.cnicePrint();
 
-
-
+//class composition exercise
+Birthday bd(2,21,1985);
+Person p("David",bd);
+p.printinfo();
 
 
 
