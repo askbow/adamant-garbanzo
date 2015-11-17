@@ -19,9 +19,19 @@ using namespace std;
 class BankAccount{
  public:
      //constructor:
+     BankAccount(){}
      BankAccount(string nm="", float saldo = 0){
      balance = saldo;
      setName(nm);
+     }
+     BankAccount(float saldo = 0, string nm="")
+     :balance(saldo), name(nm){}
+     //operator overloading:
+     BankAccount operator+(BankAccount &obj)
+     {
+         BankAccount red;
+         red.balance=this->balance+obj.balance;
+         return red;
      }
 
      //public methods:
@@ -46,6 +56,14 @@ class BankAccount{
      }//withdraw
      float readbalance(){
      return balance;
+     }
+     //using "this":
+     void printinfo(){
+     cout<<name<<endl;//var directly
+     cout<<this->balance<<endl;//this is a pointer
+     }
+     void printinfoinline(){
+     cout<<name<<":"<<(*this).balance<<endl;
      }
  private:
     float balance;
@@ -80,7 +98,14 @@ cout<<test.readbalance()<<endl;
 //friendly:
 camarade(test);
 
+//overload:
+BankAccount second("minder", 500);
+BankAccount summer = test + second;
 
+
+//this:
+test.printinfo();
+test.printinfoinline();
 
 //next class exercise:
 someNiceClass obj(56,70);
